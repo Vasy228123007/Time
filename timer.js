@@ -8,7 +8,22 @@ var k = document.getElementById("knopka"); // Кнопка
 
 k.onclick = function(e) {
     //alert('Таймер успешно запущен'); //Уведомления о запуске таймера
-    console.log(c.value);
-    console.log(m.value);
-    console.log(s.value);
+    var minyt = m.value;
+    var sekyn = s.value;
+
+    var interval = setInterval(function() {
+        rezyltat.innerText = minyt+":"+sekyn;
+        sekyn = sekyn -1;
+        if(minyt<=0){
+            minyt=0
+        }
+        if(sekyn<=0){
+            minyt=minyt-1;
+            sekyn=59;
+            if(minyt<=0){
+                alert('Таймер завершон');
+                clearInterval(interval);
+            }
+        }
+    }, 1000)
 }
