@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
-    <input type="number" id="chas"> <h3>Час</h3> 
-    <input type="number" id="min"> <h3>Минуты</h3>
-    <input type="number" id="sekyn"> <h3>Секунды</h3>
+    <input type="number" id="chas" min="0"> <h3 id="chas-text">Час:</h3> 
+    <input type="number" id="min" min="0"> <h3 id="min-text">Минуты:</h3>
+    <input type="number" id="sekyn" min="0"> <h3 id="sekyn-text">Секунды:</h3>
     <button id="knopka">Старт</button>
     <div id="timer"></div>
     <script src="timer.js"></script> <!-- Подключения к js -->
