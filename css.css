@@ -1,6 +1,19 @@
+a#img{
+    position: absolute;
+    top: 306px;
+    left: 387px;
+}
+a#img img{
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+div#error{
+    display: none;
+}
 div#timer {
     font-size:1000%;
-    color:blue;
+    color:rgb(223, 184, 122);
     position: absolute;
     top: 10%;
     left: 50%;
@@ -11,6 +24,7 @@ input#chas {
     position: absolute;
     top: 30%;
     left: 20%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     outline: none;
     border-radius : 10px;
     border: 1px solid black;
@@ -29,6 +43,7 @@ input#min {
     position: absolute;
     top: 20%;
     left: 20%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     outline: none;
     border-radius : 10px;
     border: 1px solid black;
@@ -47,6 +62,7 @@ input#sekyn {
     position: absolute;
     top: 10%;
     left: 20%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     outline: none;
     border-radius : 10px;
     border: 1px solid black;
@@ -70,3 +86,80 @@ button#knopka{
     outline: none;
     padding: 5px;
 }
+button#knopkastop{
+    font-size:200%;
+    color:rgb(255, 255, 255);
+    background-color: rgb(155, 1, 1);
+    position: absolute;
+    top: 295px;
+    left: 521px;
+    border-radius : 10px;
+    outline: none;
+    padding: 5px;
+}
+div#music_txt {
+    font-size:104%;
+    position: absolute;
+    top: 333px;
+    left: 325px;
+}
+label#knopkamusic {
+    font-size:200%;
+    position: absolute;
+    top: 302px;
+    left: 322px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

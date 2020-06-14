@@ -7,11 +7,21 @@
     <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
-    <input type="number" id="chas" min="0"> <h3 id="chas-text">Час:</h3> 
-    <input type="number" id="min" min="0"> <h3 id="min-text">Минуты:</h3>
-    <input type="number" id="sekyn" min="0"> <h3 id="sekyn-text">Секунды:</h3>
+
+    <a id="img"><img src="img/favorite.png"></a>
+    <input type="number" id="chas" min="0" value="0"> <h3 id="chas-text">Час:</h3> 
+    <input type="number" id="min" min="0" value="0"> <h3 id="min-text">Минуты:</h3>
+    <input type="number" id="sekyn" min="0" value="0"> <h3 id="sekyn-text">Секунды:</h3>
     <button id="knopka">Старт</button>
+    <button id="knopkastop">Сбросить</button>
+    <label class="switch" id="knopkamusic">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
     <div id="timer"></div>
+    <div id="error"></div>
+    <div id="music_txt">Музыку</div>
+    <script src="jqwery.js"></script> <!-- Подключения к js -->
     <script src="timer.js"></script> <!-- Подключения к js -->
 </body>
 </html>
