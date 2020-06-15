@@ -9,16 +9,9 @@
     var i = document.getElementById("img"); // Звездочка
     var error = document.getElementById("error"); // Ошибки
     var audio = new Audio('stop.mp3');    // Музыка
-    var music = document.getElementById("music");   // Музыку [Вкл/Выкл]
-    var audio = {};
+    var on_off = document.getElementById("on_off");   // Музыку [Вкл/Выкл]
 }
     rezyltat.innerText = "00:00:00";
-    function startAudio(url) {
-        if("pause" in audio) audio.pause();
-      
-        audio = new Audio(url);
-        audio.play();
-      }
 
 $("#knopkastop").attr("disabled", true);
 k.onclick = function(e) {
@@ -62,12 +55,26 @@ k.onclick = function(e) {
                 minyt=59
                 if(houri<=0){
                     houri=0
-                    alert('Таймер оставновлен');
+                    //alert('Таймер оставновлен');
                     clearInterval(interval);
-                    $( "#timer" ).fadeOut().delay(100);
+                    /*{
+                    $( "#timer" ).fadeOut().delay(200);
                     $( "#timer" ).fadeIn();
-                if(music<=0)
-                    audio.play();
+                    $( "#timer" ).fadeOut().delay(150);
+                    $( "#timer" ).fadeIn();
+                    $( "#timer" ).fadeOut().delay(50);
+                    $( "#timer" ).fadeIn();
+                    $( "#timer" ).fadeOut().delay(10);
+                    $( "#timer" ).fadeIn();
+                    }*/
+                    {
+                        $( "#timer" ).animate({
+                            width: "10000000000%", // ширина элемента
+                            height: "20000px", // высота элемента
+                            borderWidth: "10000000px" // ширина границ элемента
+                        });
+                    }
+                    //audio.play();
                 }
                 $("#knopka").attr("disabled", false);
             }
@@ -81,5 +88,6 @@ ks.onclick = function(e) {
     clearInterval(interval);
     rezyltat.innerText = "00:00:00";
     alert('Таймер успешно сбросен.');
+    audio.pause();
     $("#knopka").attr("disabled", false);
 }

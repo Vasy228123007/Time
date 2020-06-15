@@ -14,13 +14,12 @@
     <input type="number" id="sekyn" min="0" value="0"> <h3 id="sekyn-text">Секунды:</h3>
     <button id="knopka">Старт</button>
     <button id="knopkastop">Сбросить</button>
-    <label class="switch" id="knopkamusic">
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
+    <select class="form-control mt-10" id="on_off">
+        <option value="1" id="on">Музыка: Включена</option>
+        <option value="2" id="off">Музыка: Выключена</option>
+    </select>
     <div id="timer"></div>
     <div id="error"></div>
-    <div id="music_txt">Музыку</div>
     <script src="jqwery.js"></script> <!-- Подключения к js -->
     <script src="timer.js"></script> <!-- Подключения к js -->
 </body>
